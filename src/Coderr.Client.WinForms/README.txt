@@ -69,12 +69,13 @@ When doing so, simply report the exception like this:
         }
         catch (Exception ex)
         {
-            this.ReportException(ex, model);
+            Err.Report(ex, model);
 
             //some custom handling
         }
     }
 
 
-Questions? http://discuss.coderrapp.com
+Questions?     http://discuss.coderrapp.com/
+GitHub:        https://github.com/coderrapp/coderr.client.winforms/
 Documentation: https://coderrapp.com/documentation/client/libraries/winforms/
