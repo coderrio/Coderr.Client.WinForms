@@ -3,9 +3,12 @@ Integration library for WinForms applications
 
 [![VSTS](https://1tcompany.visualstudio.com/_apis/public/build/definitions/75570083-b1ef-4e78-88e2-5db4982f756c/16/badge)]() [![NuGet](https://img.shields.io/nuget/dt/codeRR.Client.WinForms.svg?style=flat-square)]()
 
-This library will detect all unhandled exceptions in ASP.NET MVC v5 based applications and report them to your codeRR server (or your account at https://coderrapp.com).
+This library will detect all unhandled exceptions in WinForms based applications and report them to your codeRR server.
 
+## Built in error page
 ![The built in error page](docs/screenshot.png)
+
+## Example of captured screenshot when an exception was detected
 ![Captured screenshot when an exception was thrown](docs/context-data.png)
 
 # Installation
@@ -41,16 +44,8 @@ public ActionResult UpdatePost(int uid, ForumPost post)
 This library includes the following context collections for every reported exceptions:
 
 * All in the [core library](https://github.com/coderrapp/coderr.client)
-* All in the [asp.net library](https://github.com/coderrapp/coderr.client.aspnet)
-* Action parameters
-* Controller information
-* ModelState
-* Query string
-* RouteData
-* Session data
-* TempData
-* Uploaded files
-* ViewBag
+* One property collection for each open form.
+* Screenshot of the active form (the one that threw an exception)
 
 # Requirements
 
@@ -58,29 +53,5 @@ You need to either install [codeRR Community Server](https://github.com/coderrap
 
 # Help?
 
-* [Documentation](https://coderrapp.com/documentation/client/libraries/aspnet/mvc5/)
+* [Documentation](https://coderrapp.com/documentation/client/libraries/winforms/)
 * [Forum](http://discuss.coderrapp.com)
-
-
-
-Integration library for WinForms applications
-==========================
-
-This library will detect all unhandled exceptions in WinForms-based applications and report them to your OneTrueError server (or your account at https://onetrueerror.com).
-
-# Context collections
-
-This library includes the following context collections for every reported exceptions:
-
-* All in the [core library](https://github.com/onetrueerror/onetrueerror.client)
-* One property collection for each open form.
-* Screenshot of the active form (the one that threw an exception)
-
-# Getting started
-
-1. Download and install the [OneTrueError server](https://github.com/onetrueerror/onetrueerror.server) or create an account at [OneTrueError.com](https://onetrueerror.com)
-2. Install this client library (using nuget `onetrueerror.client.winforms`)
-3. Configure the credentials from your OneTrueError account in your `Program.cs`.
-4. Add `OneTrue.Configuration.CatchWinFormsExceptions()` in your `Program.cs`.
-
-Done.
