@@ -57,19 +57,22 @@ public class Program
 All unhandled exceptions are reported manually. 
 But sometimes you need to deal with exceptions yourself. 
 
-To report exceptions manually in your controller, use `this.ReportError(exception)` to allow codeRR to include RouteData, ViewBag, TempData etc when your exception is reported.
-If you do not have access to the controller, you can use the `httpContext` (`httpContext.ReportException()`) or just `Err.Report()`. 
+When doing so, simply report the exception like this:
 
 ```csharp
-public ActionResult UpdatePost(int uid, ForumPost post)
+public void OnPostClick()
 {
+	var model = CreatePostDto();
+
 	try
 	{
-		_service.Update(uid, post);
+		_somService.Execute(model);
 	}
 	catch (Exception ex)
 	{
-		this.ReportException(ex, new{ UserId = uid, ForumPost = post });
+		this.ReportException(ex, model);
+
+		//some custom handling
 	}
 }
 ```
