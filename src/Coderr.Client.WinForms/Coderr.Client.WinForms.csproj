@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net451</TargetFramework>
+    <Version>1.0.5.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RootNamespace>codeRR.Client.WinForms</RootNamespace>
+    <DocumentationFile>bin\$(Configuration)\$(Platform)\Coderr.Client.WinForms.xml</DocumentationFile>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <PackageId>Coderr.Client.WinForms</PackageId>
+    <Authors>1TCompany AB</Authors>
+    <Description>Automated exception handling for WinForms-based applications</Description>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Converted to vstudio 2017 csproj format</PackageReleaseNotes>
+    <Copyright>© 2017 1TCompany AB. All rights reserved.</Copyright>
+    <PackageTags>logger exceptions analysis winforms</PackageTags>
+    <PackageIconUrl>https://coderrapp.com/images/nuget_icon.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/coderrapp/coderr.client.winforms</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseUrl>https://github.com/coderrapp/coderr.client.winforms/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://coderrapp.com</PackageProjectUrl>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Coderr.Client" Version="1.0.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="README.txt">
+      <Pack>true</Pack>
+      <PackagePath>README.txt</PackagePath>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\nomorelogs.jpg" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="NotificationControl.*.cs">
+      <DependentUpon>NotificationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="NotificationControl.resx">
+      <DependentUpon>NotificationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ReportDialog.*.cs">
+      <DependentUpon>ReportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ReportDialog.resx">
+      <DependentUpon>ReportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ErrorDescription.*.cs">
+      <DependentUpon>ErrorDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ErrorDescription.resx">
+      <DependentUpon>ErrorDescription.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
