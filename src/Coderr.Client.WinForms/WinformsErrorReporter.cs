@@ -47,6 +47,7 @@ namespace Coderr.Client.WinForms
                 && !Err.Configuration.UserInteraction.AskUserForPermission)
             {
                 Err.UploadReport(dto);
+                return;
             }
 
             if (!Err.Configuration.UserInteraction.AskUserForPermission)

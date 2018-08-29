@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net451</TargetFramework>
-    <Version>1.1.0.0</Version>
+    <Version>1.1.1.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Coderr.Client.WinForms</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(Platform)\Coderr.Client.WinForms.xml</DocumentationFile>
   </PropertyGroup>
   
   <PropertyGroup>
-    <PackageReleaseNotes>Changed namespaces and corrected a dialog bug</PackageReleaseNotes>
+    <PackageReleaseNotes>Error dialog can now be hidden.</PackageReleaseNotes>
     <PackageId>Coderr.Client.WinForms</PackageId>
     <Authors>1TCompany AB</Authors>
     <Description>Automated exception handling for WinForms-based applications</Description>
