@@ -8,7 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace codeRR.Client.WinForms.Demo.Properties {
+namespace Coderr.Client.WinForms.Demo.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -36,7 +39,7 @@ namespace codeRR.Client.WinForms.Demo.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OneTrueError.Client.WinForms.Demo.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Coderr.Client.WinForms.Demo.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

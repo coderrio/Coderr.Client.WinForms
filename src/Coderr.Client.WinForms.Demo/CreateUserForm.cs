@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 
-namespace codeRR.Client.WinForms.Demo
+namespace Coderr.Client.WinForms.Demo
 {
     public partial class CreateUserForm : Form
     {

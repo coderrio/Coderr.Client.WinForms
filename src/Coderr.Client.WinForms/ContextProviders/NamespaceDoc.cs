@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace codeRR.Client.WinForms.ContextProviders
+namespace Coderr.Client.WinForms.ContextProviders
 {
     /// <summary>
     ///     Context providers for WinForms and WPF.

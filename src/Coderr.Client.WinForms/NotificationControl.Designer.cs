@@ -1,4 +1,4 @@
-﻿namespace codeRR.Client.WinForms
+﻿namespace Coderr.Client.WinForms
 {
     partial class NotificationControl
     {

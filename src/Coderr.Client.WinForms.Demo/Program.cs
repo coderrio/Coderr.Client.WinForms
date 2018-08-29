@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using Coderr.Client;
 
-namespace codeRR.Client.WinForms.Demo
+namespace Coderr.Client.WinForms.Demo
 {
     internal static class Program
     {

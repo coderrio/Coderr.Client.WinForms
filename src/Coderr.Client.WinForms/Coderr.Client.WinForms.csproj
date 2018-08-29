@@ -1,18 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net451</TargetFramework>
-    <Version>1.0.5.0</Version>
+    <Version>1.1.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <RootNamespace>codeRR.Client.WinForms</RootNamespace>
+    <RootNamespace>Coderr.Client.WinForms</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(Platform)\Coderr.Client.WinForms.xml</DocumentationFile>
   </PropertyGroup>
   
   <PropertyGroup>
+    <PackageReleaseNotes>Changed namespaces and corrected a dialog bug</PackageReleaseNotes>
     <PackageId>Coderr.Client.WinForms</PackageId>
     <Authors>1TCompany AB</Authors>
     <Description>Automated exception handling for WinForms-based applications</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Converted to vstudio 2017 csproj format</PackageReleaseNotes>
     <Copyright>© 2017 1TCompany AB. All rights reserved.</Copyright>
     <PackageTags>logger exceptions analysis winforms</PackageTags>
     <PackageIconUrl>https://coderrapp.com/images/nuget_icon.png</PackageIconUrl>
@@ -23,7 +23,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Coderr.Client" Version="1.0.6" />
+    <PackageReference Include="Coderr.Client" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

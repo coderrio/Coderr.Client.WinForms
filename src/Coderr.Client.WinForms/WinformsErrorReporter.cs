@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading;
 using System.Windows.Forms;
+using Coderr.Client;
 
-namespace codeRR.Client.WinForms
+namespace Coderr.Client.WinForms
 {
     /// <summary>
     ///     Class that processes unhandled exceptions that WinForms/WPF applications throw.
@@ -41,6 +42,13 @@ namespace codeRR.Client.WinForms
             var context = new WinformsErrorReportContext(_instance, e.Exception);
 
             var dto = Err.GenerateReport(context);
+            if (!Err.Configuration.UserInteraction.AskUserForDetails
+                && !Err.Configuration.UserInteraction.AskForEmailAddress
+                && !Err.Configuration.UserInteraction.AskUserForPermission)
+            {
+                Err.UploadReport(dto);
+            }
+
             if (!Err.Configuration.UserInteraction.AskUserForPermission)
                 Err.UploadReport(dto);
 

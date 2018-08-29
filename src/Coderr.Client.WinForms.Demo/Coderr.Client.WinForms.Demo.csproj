@@ -7,7 +7,7 @@
     <ProjectGuid>{4C041172-985C-4D05-BCB7-0E3C706C3A1C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>codeRR.Client.WinForms.Demo</RootNamespace>
+    <RootNamespace>Coderr.Client.WinForms.Demo</RootNamespace>
     <AssemblyName>Coderr.Client.WinForms.Demo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Coderr.Client, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Coderr.Client.1.0.6\lib\net451\Coderr.Client.dll</HintPath>
+    <Reference Include="Coderr.Client, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coderr.Client.1.1.0\lib\net452\Coderr.Client.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
