@@ -36,6 +36,9 @@ namespace codeRR.Client.WinForms
         /// <param name="destination">Will be saved as JPEG.</param>
         public void Capture(Form form, Stream destination)
         {
+            if (form.Width == 0 || form.Height == 0)
+                return;
+
             using (var g = form.CreateGraphics())
             {
                 using (var bmp = new Bitmap(form.Width, form.Height, PixelFormat))
