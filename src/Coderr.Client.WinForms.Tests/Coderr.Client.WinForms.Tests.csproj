@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
-    <RootNamespace>codeRR.Client.WinForms.Tests</RootNamespace>
+    <RootNamespace>Coderr.Client.WinForms.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +11,7 @@
     <PackageReference Include="NSubstitute" Version="2.0.3" />
     <PackageReference Include="xunit" Version="2.3.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.0" />
-    <PackageReference Include="Coderr.Client" Version="1.0.6" />
+    <PackageReference Include="Coderr.Client" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>

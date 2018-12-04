@@ -2,10 +2,11 @@
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
-using codeRR.Client.ContextCollections;
-using codeRR.Client.Contracts;
+using Coderr.Client;
+using Coderr.Client.ContextCollections;
+using Coderr.Client.Contracts;
 
-namespace codeRR.Client.WinForms
+namespace Coderr.Client.WinForms
 {
     /// <summary>
     ///     Default dialog which is shown when an error has been caught

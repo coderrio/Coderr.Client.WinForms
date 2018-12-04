@@ -1,4 +1,4 @@
-﻿namespace codeRR.Client.WinForms.Demo
+﻿namespace Coderr.Client.WinForms.Demo
 {
     partial class CreateUserForm
     {

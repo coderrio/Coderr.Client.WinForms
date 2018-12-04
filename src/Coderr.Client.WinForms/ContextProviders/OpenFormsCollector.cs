@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
-using codeRR.Client.ContextProviders;
-using codeRR.Client.Contracts;
-using codeRR.Client.Reporters;
+using Coderr.Client.ContextProviders;
+using Coderr.Client.Contracts;
+using Coderr.Client.Reporters;
 
-namespace codeRR.Client.WinForms.ContextProviders
+namespace Coderr.Client.WinForms.ContextProviders
 {
     /// <summary>
     ///     Serializes all open forms into the context collection named <c>"OpenForms"</c>

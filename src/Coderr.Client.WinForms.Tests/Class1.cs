@@ -1,4 +1,4 @@
-﻿namespace codeRR.Client.WinForms.Tests
+﻿namespace Coderr.Client.WinForms.Tests
 {
     public class Class1
     {

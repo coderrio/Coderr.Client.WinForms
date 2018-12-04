@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace codeRR.Client.WinForms
+namespace Coderr.Client.WinForms
 {
     internal partial class NotificationControl : UserControl
     {

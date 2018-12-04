@@ -1,6 +1,6 @@
-﻿using codeRR.Client.Contracts;
+﻿using Coderr.Client.Contracts;
 
-namespace codeRR.Client.WinForms
+namespace Coderr.Client.WinForms
 {
     /// <summary>
     ///     Allows us to pass information to the delegate that is used to create a new error reporting dialog

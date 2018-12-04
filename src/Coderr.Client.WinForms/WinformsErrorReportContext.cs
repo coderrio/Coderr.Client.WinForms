@@ -1,7 +1,7 @@
 ﻿using System;
-using codeRR.Client.Reporters;
+using Coderr.Client.Reporters;
 
-namespace codeRR.Client.WinForms
+namespace Coderr.Client.WinForms
 {
     /// <summary>
     ///     Customization for WinForms/WPF applications

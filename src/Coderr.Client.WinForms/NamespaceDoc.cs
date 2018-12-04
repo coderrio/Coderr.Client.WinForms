@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace codeRR.Client.WinForms
+namespace Coderr.Client.WinForms
 {
     /// <summary>
     ///     <para>
