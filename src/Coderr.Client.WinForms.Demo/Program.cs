@@ -15,8 +15,8 @@ namespace Coderr.Client.WinForms.Demo
             // replace with your own settings
             var uri = new Uri("http://localhost:50473/");
             Err.Configuration.Credentials(uri,
-                "5f219f356daa40b3b31dfc67514df6d6",
-                "22612e4444f347d1bb3d841d64c9750a");
+                "9aaf662e-caf7-49bb-8741-1997cea362ff",
+                "aa866c0b-235c-4190-9581-9e8b59db8db5");
 
             // to catch unhandled exceptions
             Err.Configuration.CatchWinFormsExceptions();
@@ -24,9 +24,14 @@ namespace Coderr.Client.WinForms.Demo
             // different types of available options.
             Err.Configuration.TakeScreenshotOfActiveFormOnly();
             //Err.Configuration.TakeScreenshots();
+
+            // Once of these must be active to show the error form
+            //=============
             Err.Configuration.UserInteraction.AskUserForDetails = true;
-            Err.Configuration.UserInteraction.AskUserForPermission = true;
-            Err.Configuration.UserInteraction.AskForEmailAddress = true;
+            //Err.Configuration.UserInteraction.AskUserForPermission = true;
+            //Err.Configuration.UserInteraction.AskForEmailAddress = true;
+
+            Err.Configuration.SetErrorForm(context => new CustomErrorDialog(context));
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
