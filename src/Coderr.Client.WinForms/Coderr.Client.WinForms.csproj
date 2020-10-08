@@ -1,46 +1,47 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
   <PropertyGroup>
-    <TargetFramework>net451</TargetFramework>
-    <Version>1.1.1.0</Version>
+    <TargetFrameworks>net461;netcoreapp3.0</TargetFrameworks>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Version>2.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Coderr.Client.WinForms</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(Platform)\Coderr.Client.WinForms.xml</DocumentationFile>
   </PropertyGroup>
-  
+
   <PropertyGroup>
-    <PackageReleaseNotes>Error dialog can now be hidden.</PackageReleaseNotes>
+    <PackageReleaseNotes>Switched to the new base package.</PackageReleaseNotes>
     <PackageId>Coderr.Client.WinForms</PackageId>
     <Authors>1TCompany AB</Authors>
-    <Description>Automated exception handling for WinForms-based applications</Description>
+    <Description>Collects unhandled exceptions, can take screenshots and collect WinForms related telemetry.</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Copyright>© 2017 1TCompany AB. All rights reserved.</Copyright>
+    <Copyright>Copyright 2020 © Coderr AB. All rights reserved.</Copyright>
     <PackageTags>logger exceptions analysis winforms</PackageTags>
-    <PackageIconUrl>https://coderrapp.com/images/nuget_icon.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/coderrapp/coderr.client.winforms</RepositoryUrl>
+    <PackageIcon>NugetIcon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/coderrio/coderr.client.winforms</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageLicenseUrl>https://github.com/coderrapp/coderr.client.winforms/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://coderrapp.com</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://coder.io</PackageProjectUrl>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Coderr.Client" Version="1.1.0" />
-  </ItemGroup>
-  <ItemGroup>
+
+
+  <ItemGroup Condition="$(TargetFramework) == 'net461'">
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Content Include="README.txt">
       <Pack>true</Pack>
       <PackagePath>README.txt</PackagePath>
     </Content>
+    <None Include="NugetIcon.png" Pack="true" PackagePath="" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <EmbeddedResource Include="Resources\nomorelogs.jpg" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Update="NotificationControl.*.cs">
       <DependentUpon>NotificationControl.cs</DependentUpon>
@@ -60,6 +61,14 @@
     <Compile Update="ErrorDescription.resx">
       <DependentUpon>ErrorDescription.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Coderr.Client" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(TargetFramework) == 'netcoreapp3.0'">
+    <PackageReference Include="System.Resources.Extensions" Version="4.7.1" />
   </ItemGroup>
 
 </Project>

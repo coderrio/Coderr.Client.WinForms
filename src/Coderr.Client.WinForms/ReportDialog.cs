@@ -71,7 +71,7 @@ namespace Coderr.Client.WinForms
 
             if (!string.IsNullOrEmpty(info) || !string.IsNullOrEmpty(email))
             {
-                Err.LeaveFeedback(_dto.ReportId, new UserSuppliedInformation(info, email));
+                Err.LeaveFeedback(_dto.ReportId, email, info);
             }
 
             Close();

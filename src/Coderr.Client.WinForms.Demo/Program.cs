@@ -13,10 +13,10 @@ namespace Coderr.Client.WinForms.Demo
         private static void Main()
         {
             // replace with your own settings
-            var uri = new Uri("http://localhost:50473/");
+            var uri = new Uri("http://localhost:60473/");
             Err.Configuration.Credentials(uri,
-                "9aaf662e-caf7-49bb-8741-1997cea362ff",
-                "aa866c0b-235c-4190-9581-9e8b59db8db5");
+                "5a617e0773b94284bef33940e4bc8384",
+                "3fab63fb846c4dd289f67b0b3340fefc");
 
             // to catch unhandled exceptions
             Err.Configuration.CatchWinFormsExceptions();

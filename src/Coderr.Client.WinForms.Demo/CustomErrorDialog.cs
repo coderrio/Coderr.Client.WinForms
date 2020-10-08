@@ -17,9 +17,9 @@ namespace Coderr.Client.WinForms.Demo
         {
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void Button1_Click(object sender, System.EventArgs e)
         {
-            Err.LeaveFeedback(_context.Report.ReportId, new UserSuppliedInformation(textBox1.Text, ""));
+            Err.LeaveFeedback(_context.Report.ReportId, textBox1.Text, null);
         }
     }
 }
