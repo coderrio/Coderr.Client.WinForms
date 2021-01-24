@@ -1,23 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <TargetFrameworks>net461;netcoreapp3.0</TargetFrameworks>
+    <TargetFrameworks>net461;netcoreapp3.0;net452</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
-    <Version>2.0</Version>
+    <Version>2.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Coderr.Client.WinForms</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(Platform)\Coderr.Client.WinForms.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageReleaseNotes>Switched to the new base package.</PackageReleaseNotes>
+    <PackageReleaseNotes>Bumped base package.</PackageReleaseNotes>
     <PackageId>Coderr.Client.WinForms</PackageId>
-    <Authors>1TCompany AB</Authors>
+    <Authors>Coderr AB</Authors>
     <Description>Collects unhandled exceptions, can take screenshots and collect WinForms related telemetry.</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Copyright>Copyright 2020 © Coderr AB. All rights reserved.</Copyright>
     <PackageTags>logger exceptions analysis winforms</PackageTags>
     <PackageIcon>NugetIcon.png</PackageIcon>
+
     <RepositoryUrl>https://github.com/coderrio/coderr.client.winforms</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -29,13 +30,20 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
+  <ItemGroup Condition="$(TargetFramework) == 'net452'">
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup Condition="$(TargetFramework) == 'netcoreapp3.0'">
+    <PackageReference Include="System.Resources.Extensions" Version="4.7.1" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="README.txt">
       <Pack>true</Pack>
       <PackagePath>README.txt</PackagePath>
     </Content>
-    <None Include="NugetIcon.png" Pack="true" PackagePath="" />
+    <None Include="NugetIcon.png" Pack="true" PackagePath="/" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,11 +72,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Coderr.Client" Version="2.0.1" />
+    <PackageReference Include="Coderr.Client" Version="2.0.4" />
   </ItemGroup>
 
-  <ItemGroup Condition="$(TargetFramework) == 'netcoreapp3.0'">
-    <PackageReference Include="System.Resources.Extensions" Version="4.7.1" />
-  </ItemGroup>
+
 
 </Project>
