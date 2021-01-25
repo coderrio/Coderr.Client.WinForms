@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
-using Coderr.Client;
 using Coderr.Client.Config;
+using Coderr.Client.WinForms;
 using Coderr.Client.WinForms.ContextProviders;
 
 // Keeps in the root namespace to get IntelliSense
 
 // ReSharper disable once CheckNamespace
 
-namespace Coderr.Client.WinForms
+namespace Coderr.Client
 {
     /// <summary>
     ///     Use <c>Err.Configuration.CatchWinFormsExceptions()</c> to get started.
